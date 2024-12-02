@@ -1,0 +1,17 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='U-2023.03-SP2 linux6' PARAM_COUNT=0
+.TITLE '*  generated for: primesim'
+ tcdr             temper           alter#          
+  2.054e-10         25.0000        1               
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='U-2023.03-SP2 linux6' PARAM_COUNT=0
+.TITLE '*  generated for: primesim'
+ tpdr             temper           alter#          
+  2.643e-10         25.0000        1               
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='U-2023.03-SP2 linux6' PARAM_COUNT=0
+.TITLE '*  generated for: primesim'
+ tcdf             temper           alter#          
+  2.575e-10         25.0000        1               
+              
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='U-2023.03-SP2 linux6' PARAM_COUNT=0
+.TITLE '*  generated for: primesim'
+ tpdf             temper           alter#          
+  3.042e-10         25.0000        1               

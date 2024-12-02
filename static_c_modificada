@@ -1,0 +1,102 @@
+*  Generated for: PrimeSim
+*  Design library name: Tarea_2
+*  Design cell name: static_cell
+*  Design view name: schematic
+
+
+.param SUPPLY = 1.8
+.option PARHIER = LOCAL
+.option PORT_VOLTAGE_SCALE_TO_2X = 1
+.option S_ELEM_CACHE_DIR = "/home/Cordoba_Wright_I_2024_vlsi/.synopsys_custom/sparam_dir"
+.option PVA_OUTPUT_DIR = "/home/Cordoba_Wright_I_2024_vlsi/.synopsys_custom/pva_dir"
+
+.option WDF=1
+.temp 25
+.lib '/mnt/vol_NFS_rh003/Est_VLSI_I_2024/Cordoba_Wright_I_2024_vlsi/Tarea2/Hspice/lp5mos/xt018.lib' tm
+.lib '/mnt/vol_NFS_rh003/Est_VLSI_I_2024/Cordoba_Wright_I_2024_vlsi/Tarea2/Hspice/lp5mos/param.lib' 3s
+.lib '/mnt/vol_NFS_rh003/Est_VLSI_I_2024/Cordoba_Wright_I_2024_vlsi/Tarea2/Hspice/lp5mos/config.lib' default
+
+*PrimeWave Design Environment Version U-2023.03-SP2
+*Sat Mar 30 18:42:58 2024
+
+
+********************************************************************************
+* Library          : Tarea_2
+* Cell             : static_cell
+* View             : schematic
+* View Search List : hspice hspiceD schematic cmos_sch spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+
+*-----------------------------------------------------------------------------------
+* Subcircuit
+*-----------------------------------------------------------------------------------
+.global gnd! vdd!
+.subckt SC a b c d q 
+
+xm5 net66 d net21 net21 pe w=1.8u l=180n as=8.64e-13 ad=8.64e-13 ps=4.56e-06 pd=4.56e-06
++ nrs=0.15 nrd=0.15 m='1*1' par1='1*1' xf_subext=0
+xm4 net21 c vdd! vdd! pe w=1.8u l=180n as=8.64e-13 ad=8.64e-13 ps=4.56e-06 pd=4.56e-06
++ nrs=0.15 nrd=0.15 m='1*1' par1='1*1' xf_subext=0
+xm3 q net66 vdd! vdd! pe w=5.22u l=180n as=2.5056e-12 ad=2.5056e-12 ps=1.14e-05
++ pd=1.14e-05 nrs=0.0517241 nrd=0.0517241 m='1*1' par1='1*1' xf_subext=0
+xm2 net66 a net9 net9 pe w=1.8u l=180n as=8.64e-13 ad=8.64e-13 ps=4.56e-06 pd=4.56e-06
++ nrs=0.15 nrd=0.15 m='1*1' par1='1*1' xf_subext=0
+xm1 net9 b vdd! vdd! pe w=1.8u l=180n as=8.64e-13 ad=8.64e-13 ps=4.56e-06 pd=4.56e-06
++ nrs=0.15 nrd=0.15 m='1*1' par1='1*1' xf_subext=0
+xm10 q net66 gnd! gnd! ne w=2.61u l=180n as=1.2528e-12 ad=1.2528e-12 ps=6.18e-06
++ pd=6.18e-06 nrs=0.103448 nrd=0.103448 m='1*1' par1='1*1' xf_subext=0
+xm9 net60 b gnd! gnd! ne w=900n l=180n as=4.32e-13 ad=4.32e-13 ps=2.76e-06 pd=2.76e-06
++ nrs=0.3 nrd=0.3 m='1*1' par1='1*1' xf_subext=0
+xm8 net66 d net60 net60 ne w=900n l=180n as=4.32e-13 ad=4.32e-13 ps=2.76e-06 pd=2.76e-06
++ nrs=0.3 nrd=0.3 m='1*1' par1='1*1' xf_subext=0
+xm7 net60 a gnd! gnd! ne w=900n l=180n as=4.32e-13 ad=4.32e-13 ps=2.76e-06 pd=2.76e-06
++ nrs=0.3 nrd=0.3 m='1*1' par1='1*1' xf_subext=0
+xm6 net66 c net60 net60 ne w=900n l=180n as=4.32e-13 ad=4.32e-13 ps=2.76e-06 pd=2.76e-06
++ nrs=0.3 nrd=0.3 m='1*1' par1='1*1' xf_subext=0
+
+.ends
+
+.subckt inv in out  
+
+xm1 out net16 gnd! gnd! ne w=880n l=180n as=4.224e-13 ad=4.224e-13 ps=2.72e-06
++ pd=2.72e-06 nrs=0.306818 nrd=0.306818 m='1*1' par1='1*1' xf_subext=0
+xm0 net16 in gnd! gnd! ne w=220n l=180n as=1.056e-13 ad=1.056e-13 ps=1.4e-06 pd=1.4e-06
++ nrs=1.22727 nrd=1.22727 m='1*1' par1='1*1' xf_subext=0
+xm3 out net16 vdd! vdd! pe w=1.76u l=180n as=8.448e-13 ad=8.448e-13 ps=4.48e-06
++ pd=4.48e-06 nrs=0.153409 nrd=0.153409 m='1*1' par1='1*1' xf_subext=0
+xm2 net16 in vdd! vdd! pe w=440n l=180n as=2.112e-13 ad=2.112e-13 ps=1.84e-06
++ pd=1.84e-06 nrs=0.613636 nrd=0.613636 m='1*1' par1='1*1' xf_subext=0
+
+.ends
+
+*------------------------------------------------------------------------------------
+* Simulation netlist
+*-----------------------------------------------------------------------------------
+
+Vdd vdd! gnd! 'SUPPLY'
+
+Vinb in gnd! dc=1.8 pulse (1.8 0 32n '1np' '1np' 32n 64n )
+
+Xinv in outinv inv
+
+Xs outinv outinv vdd! vdd! outq SC
+
+C1 outq gnd! 67.5f
+
+*----------------------------------------------------------------------------------
+* Stimulus
+*----------------------------------------------------------------------------------
+
+.tran 10p 80n start=0
+
+.measure tpdf * rising prop delay
++ TRIG v(outinv) VAL='SUPPLY/2' FALL=1
++ TARG v(outq) VAL='SUPPLY/2' FALL=1
+
+
+.option opfile=1 split_dp=1
+.option probe=1
+
+
+.end
