@@ -220,17 +220,10 @@ Partiendo del diagrama de palitos se realizó el trazado utilizado la herramient
 
 ![Diagrama de palits](Imagenes/LayoutCompleja.jpg)
 
-![Diagrama de palits](Imagenes/Screenshot%202024-04-20%20014056.png)
-
-![Diagrama de palits](Imagenes/LVS_Static.png)
-
 Posteriormente se realizó el trazado de la compuerta NOT que lleva el diseño completo de la función lógica. 
 
 ![Diagrama de palits](Imagenes/Layout_Inversor.png)
 
-![Diagrama de palits](Imagenes/DRC_inversor.png)
-
-![Diagrama de palits](Imagenes/LVS_inversor.png)
 
 #### 3.8.3. Simulación Post-trazado
 
