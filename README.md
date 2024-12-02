@@ -17,7 +17,7 @@ A contunuacion se muestra el problema 9.4.
 
 ![Problema9.4](Imagenes/¨Problema%209.4.jpg)
 
-## 2. Datos Relevantes
+## 2. Datos 
 
 * Uso de la tecnología XH018
 * Simulador: HSpice
